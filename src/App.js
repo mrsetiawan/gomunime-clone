@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'antd';
 import logo from './logo.svg';
 import './App.css';
 
@@ -10,14 +11,29 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          <Button type="primary" block>
+            Primary
+          </Button>
+          <Button block>Default</Button>
+          <Button type="dashed" block>
+            Dashed
+          </Button>
+          <Button type="link" block>
+            Link
+          </Button>
+
+          <Button type="primary" danger>
+            Primary
+          </Button>
+          <Button danger>Default</Button>
+          <Button type="dashed" danger>
+            link
+          </Button>
+          <Button type="link" danger>
+            link
+          </Button>
+        </div>
       </header>
     </div>
   );
