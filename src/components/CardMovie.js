@@ -25,7 +25,7 @@ const CardMovie = (props) => {
 
   return (
     <>
-      <Card title="Card Title" style={{paddingLeft: '0px !important'}} >
+      <Card title="Hot Series Update" style={{paddingLeft: '0px !important'}} >
         {items}
       </Card>
     </>

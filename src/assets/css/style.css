@@ -72,6 +72,11 @@
     margin: 3px !important;
     border: none !important;
     text-align: center !important;
+    margin-bottom: 15px !important;
+}
+
+.ant-card-grid-hoverable:hover {
+    transform: scale(1.1) !important;
 }
 
 .card-grid-custome img{
@@ -85,6 +90,8 @@
     display: flex; 
     justify-content: space-between;
     margin-bottom: 10px; 
+    background: white;
+    z-index: 1;
 }
 
 .card-description .card-desc-left {
