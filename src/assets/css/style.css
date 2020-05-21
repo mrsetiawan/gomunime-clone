@@ -1,0 +1,52 @@
+@import './config.css';
+
+.container {
+    padding-right: var(--spacing-15);
+    padding-left: var(--spacing-15);
+    margin-right: var(--auto);
+    margin-left: var(--auto);
+}
+
+@media (max-width: 425px){
+    .ant-card-grid {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.main-navbar {
+    background: #fff;
+    padding: 15px;
+}
+
+.navbar-menu {
+    background: #223a65;
+    width: 100vw;
+    padding: 5px;
+    line-height: 1.5;
+    color:white;
+    margin-bottom: 15px;
+}
+
+.navbar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+    flex-wrap: wrap-reverse;
+}
+

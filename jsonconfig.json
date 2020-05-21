@@ -1,0 +1,21 @@
+// {
+//   "compilerOptions": {
+//     "baseUrl": "src",
+//     "target": "es6",
+//     "paths": {
+//       "components": ["./components"],
+//       "components/Navbar": ["./components/Navbar"],
+//       "pages": ["./pages"],
+//       "pages/Main": ["./pages/Main"],
+//       "assets": ["./assets"]
+//     },
+//     "include": ["src"]
+//   }
+// }
+
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}
