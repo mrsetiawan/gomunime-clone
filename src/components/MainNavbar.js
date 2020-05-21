@@ -1,10 +1,10 @@
 import React from 'react';
 import { Row, Col, Input } from 'antd';
 import images from '../../src/assets/images/gomu.png';
-
+import NavMenuChildren from './NavMenuChildren';
 const { Search } = Input;
 
-const Navbar = () => {
+const MainNavbar = () => {
   return (
     <>
       <div className='main-navbar'>
@@ -25,21 +25,19 @@ const Navbar = () => {
       </div>
 
       <Row justify="start">
-        <div className='navbar-menu'>
-          <div className='container'>
-            <div className='navbar-flex'>
-              <span>Lorem, ipsum.</span>
-              <span>Lorem, ipsum.</span>
-              <span>Lorem, ipsum.</span>
-              <span>Lorem, ipsum.</span>
-              <span>Lorem, ipsum.</span>
-              <span>Lorem, ipsum.</span>
-            </div>
-          </div>
-        </div>
+        <NavMenuChildren>
+          <span>Home</span>
+          <span>Anime List</span>
+          <span>Movie List</span>
+          <span>Tv Series</span>
+          <span>Live Action</span>
+          <span>Completed</span>
+          <span>OnGoing</span>
+          <span>Anime Episode Terbaru</span>  
+        </NavMenuChildren>
       </Row>
     </>
   )
 }
 
-export default Navbar;
+export default MainNavbar;

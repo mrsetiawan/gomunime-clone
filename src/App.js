@@ -1,11 +1,16 @@
 import React from 'react';
-import Main from './pages/Main'; 
-// import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import appRoutes from './routes/appRoutes';
+
 import './App.css';
 
 function App() {
   return (
-    <Main />
+    <Router>
+      <Switch>
+        {appRoutes.map(route => <Route {...route} /> )}
+      </Switch>
+    </Router>
   );
 }
 
