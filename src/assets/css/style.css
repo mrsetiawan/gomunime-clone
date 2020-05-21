@@ -30,16 +30,16 @@
 
 .main-navbar {
     background: #fff;
-    padding: 15px;
+    padding: var(--spacing-15);
 }
 
 .navbar-menu {
     background: #223a65;
     width: 100vw;
-    padding: 15px;
+    padding: var(--spacing-15);
     line-height: 1.5;
     color:white;
-    margin-bottom: 15px;
+    margin-bottom: var(--spacing-15);
 }
 
 .navbar-flex {
@@ -61,8 +61,49 @@
     font-weight: bold;
 }
 
-/* .navbar-flex a:visited span{
-    color: salmon;
-    font-weight: bold;
-} */
+.ant-card-grid {
+    transition: .5s;
+}
 
+.card-grid-custome{
+    width: 24.299% !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 3px !important;
+    border: none !important;
+    text-align: center !important;
+}
+
+.card-grid-custome img{
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.card-grid-custome .card-description {
+    display: flex; 
+    justify-content: space-between;
+    margin-bottom: 10px; 
+}
+
+.card-description .card-desc-left {
+    background: #4458c7de; 
+    padding: 5;
+    flex-grow: 1; 
+    color: white;
+}
+
+.card-description .card-desc-right {
+    background: #ffc625; 
+    color: black; 
+}
+
+.card-description .card-desc-right small {
+    padding: 5px;
+}
+
+.card-grid-custome .card-desc-bottom {
+    color: black;
+    padding: 3px;
+}

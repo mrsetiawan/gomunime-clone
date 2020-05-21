@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        {appRoutes.map(route => <Route {...route} /> )}
+        {appRoutes.map(route => <Route key={route.name} {...route} /> )}
       </Switch>
     </Router>
   );
