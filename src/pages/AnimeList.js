@@ -1,14 +1,14 @@
 import React from 'react';
 import Layout from './Layout';
 
-const Home = () => {
+const AnimeList = () => {
   return (
     <Layout>
       <div className="container">
-        <p>Home page</p>
+        <p>Anime list</p>
       </div>
     </Layout>
   )
 }
 
-export default Home;
+export default AnimeList;

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Row, Col, Input } from 'antd';
+import { Row, Col } from 'antd';
+import { Link } from 'react-router-dom';
 import images from '../../src/assets/images/gomu.png';
 import NavMenuChildren from './NavMenuChildren';
-const { Search } = Input;
+import SearchMovies from './SearchMovies';
 
 const MainNavbar = () => {
   return (
@@ -11,14 +12,12 @@ const MainNavbar = () => {
         <div className='container'>
           <Row justify="space-between">
             <Col span={18}>
-              <img src={images} alt="tes" />
+              <Link to="/">
+                <img src={images} alt="tes" />
+              </Link>
             </Col>
             <Col span={6}>
-              <Search
-                placeholder="input search text"
-                onSearch={value => console.log(value)}
-                style={{ width: 300 }}
-              />
+              <SearchMovies />
             </Col>
           </Row>
         </div>
@@ -26,8 +25,8 @@ const MainNavbar = () => {
 
       <Row justify="start">
         <NavMenuChildren>
-          <span>Home</span>
-          <span>Anime List</span>
+          <Link to="/">Home</Link>
+          <Link to="/anime-list">Anime List</Link>
           <span>Movie List</span>
           <span>Tv Series</span>
           <span>Live Action</span>

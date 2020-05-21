@@ -50,3 +50,19 @@
     flex-wrap: wrap-reverse;
 }
 
+.navbar-flex a {
+    color: white;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.navbar-flex a:hover {
+    color: salmon;
+    font-weight: bold;
+}
+
+/* .navbar-flex a:visited span{
+    color: salmon;
+    font-weight: bold;
+} */
+
