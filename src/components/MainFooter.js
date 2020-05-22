@@ -3,7 +3,7 @@ import NavMenuChildren from './NavMenuChildren';
 
 const MainFooter = (props) => {
   return (
-    <NavMenuChildren>
+    <NavMenuChildren classDeg='navbar-menu-deg'>
       <span>Earnings Disclaimer</span>
       <span>Terms of Use</span>
       <span>Anime Episode Terbaru</span>

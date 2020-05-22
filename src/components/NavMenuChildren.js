@@ -2,7 +2,7 @@ import React from 'react';
 
 function NavMenuChildren(props) {
   return (
-    <div className='navbar-menu'>
+    <div className={props.classDeg ? 'navbar-menu-deg' : 'navbar-menu'}>
       <div className='container'>
         <div className='navbar-flex'>
           {props.children}
