@@ -11,12 +11,12 @@ const MainNavbar = () => {
       <div className='main-navbar'>
         <div className='container'>
           <Row justify="space-between">
-            <Col span={18}>
+            <Col lg={18} md={12} sm={12} xs={24}>
               <Link to="/">
                 <img src={images} alt="tes" />
               </Link>
             </Col>
-            <Col span={6}>
+            <Col lg={6} md={12} sm={12} xs={24}>
               <SearchMovies />
             </Col>
           </Row>

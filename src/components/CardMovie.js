@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card } from 'antd';
-import imgThumbnail from '../assets/images/thumbnaiil.jpg'
+import imgThumbnail from '../assets/images/thumbnaiil.jpg';
+import CardTitle from './CardTitle';
 
 const CardMovie = (props) => {
 
-  const items = [0, 1, 2, 3,4,5,6,7].map(item => {
+  const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
     return (
       <Card.Grid key={item} className="card-grid-custome">
         <img src={imgThumbnail} alt="img-thumbnail" />
@@ -25,9 +26,9 @@ const CardMovie = (props) => {
 
   return (
     <>
-      <Card title="Hot Series Update" style={{paddingLeft: '0px !important'}} >
+      <CardTitle title='Hot Series Update'>
         {items}
-      </Card>
+      </CardTitle>
     </>
   )
 
