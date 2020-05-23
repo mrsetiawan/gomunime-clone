@@ -7,7 +7,7 @@ import SearchMovies from './SearchMovies';
 
 const MainNavbar = () => {
   return (
-    <>
+    <div className='wrap-navbar-sticky'>
       <div className='main-navbar'>
         <div className='container'>
           <Row justify="space-between">
@@ -35,7 +35,7 @@ const MainNavbar = () => {
           <span>Anime Episode Terbaru</span>  
         </NavMenuChildren>
       </Row>
-    </>
+    </div>
   )
 }
 

@@ -37,6 +37,12 @@ body {
     padding-right:  15px;
 }
 
+/* .wrap-navbar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+} */
+
 .main-navbar {
     background: #fff;
     padding: var(--spacing-15);
@@ -62,7 +68,6 @@ body {
     padding: var(--spacing-15);
     line-height: 1.5;
     color:white;
-    margin-bottom: var(--spacing-15);
 }
 
 .navbar-flex {
@@ -152,6 +157,7 @@ body {
 .list-right-sidebar {
     padding: 9px;
     background: white;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .list-rating {
