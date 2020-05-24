@@ -1,4 +1,5 @@
 import React from 'react';
+import { Col } from 'antd';
 import NavMenuChildren from './NavMenuChildren';
 import imgThumbnailSidebar from '../assets/images/footerimg.jpg';
 
@@ -12,16 +13,6 @@ const MainFooter = (props) => {
     width: '100%',
     height: 'auto',
     color: 'white'
-  }
-
-  const footerBg = {
-    background: 'rgba(3, 12, 60, 0.76)',
-    width: '100%',
-    height: 'auto',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    padding: '15px'
-    
   }
 
   return (
@@ -41,10 +32,15 @@ const MainFooter = (props) => {
         <span>Mangaku</span>
       </NavMenuChildren>
 
-      <div className='footer' style={footerWrap}>
-        <div style={footerBg}>
+      <div className='footer-wrap' style={footerWrap}>
+        <div className='footer-bg'>
           <div className='container'>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, harum.</p>
+            <div span={18} className='order-by-alphabet' style={{display: 'flex', flexDirection: 'row', justifyContent:'space-between', alignItems:'top'}}>
+              <div>1</div>
+              <div>1</div>
+              <div>1</div>
+            </div>
           </div>
         </div>
       </div>
