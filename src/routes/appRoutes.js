@@ -1,5 +1,6 @@
 import Home from '../pages/Home';
 import AnimeList from '../pages/AnimeList';
+import DetailMovie from '../pages/DetailMovie';
 
 const appRoutes = [
   {
@@ -13,6 +14,12 @@ const appRoutes = [
     component: AnimeList,
     exact: true,
     path: "/anime-list"
+  },
+  {
+    name: "Detail Movie",
+    component: DetailMovie,
+    exact: true,
+    path: "/detail-movie/:id"
   }
 
 ]

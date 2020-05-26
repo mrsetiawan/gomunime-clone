@@ -1,6 +1,8 @@
 import {
   React,
-  ReactDOM
+  ReactDOM,
+  Provider
+  
 } from './libraries/libraries.js';
 
 import App from './App';
