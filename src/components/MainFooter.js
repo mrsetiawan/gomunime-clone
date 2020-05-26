@@ -1,5 +1,4 @@
-import React from 'react';
-import { Col } from 'antd';
+import { React } from '../libraries/libraries';
 import NavMenuChildren from './NavMenuChildren';
 import imgThumbnailSidebar from '../assets/images/footerimg.jpg';
 

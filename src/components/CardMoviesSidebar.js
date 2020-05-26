@@ -1,4 +1,4 @@
-import React from 'react';
+import { React } from '../libraries/libraries';
 import ListCardSidebarTop from './ListCardSidebarTop';
 import ListCardSidebar from './ListCardSidebar';
 

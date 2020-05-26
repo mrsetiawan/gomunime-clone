@@ -1,6 +1,9 @@
-import React from 'react';
-import { Row, Col } from 'antd';
-import { Link } from 'react-router-dom';
+import { 
+  React,
+  Row,
+  Col,
+  Link,
+} from '../libraries/libraries';
 import images from '../../src/assets/images/gomu.png';
 import NavMenuChildren from './NavMenuChildren';
 import SearchMovies from './SearchMovies';

@@ -1,5 +1,8 @@
-import React from 'react';
-import { Col, Row } from 'antd';
+import { 
+  React,
+  Col,
+  Row
+} from '../libraries/libraries';
 import imgThumbnailSidebar from '../assets/images/footerimg.jpg';
 
 const ListCardSidebarTop = (props) => {

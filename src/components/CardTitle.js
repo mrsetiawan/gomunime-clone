@@ -1,5 +1,7 @@
-import React from 'react';
-import { Card } from 'antd';
+import {
+  React,
+  Card
+} from '../libraries/libraries';
 
 const CardTitle = (props) => {
   return (

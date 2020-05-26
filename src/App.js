@@ -1,10 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import appRoutes from './routes/appRoutes';
+import { 
+  React, 
+  BrowserRouter as Router, Route, Switch 
+} from '../src/libraries/libraries';
 
+import appRoutes from '../src/routes/appRoutes';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Switch>

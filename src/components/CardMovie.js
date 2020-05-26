@@ -1,5 +1,7 @@
-import React from 'react';
-import { Card } from 'antd';
+import {
+  React,
+  Card
+} from '../libraries/libraries.js';
 import imgThumbnail from '../assets/images/thumbnaiil.jpg';
 import CardTitle from './CardTitle';
 
