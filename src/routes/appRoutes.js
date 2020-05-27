@@ -1,6 +1,7 @@
 import Home from '../pages/Home';
 import AnimeList from '../pages/AnimeList';
 import DetailMovie from '../pages/DetailMovie';
+import PageNotFound from '../pages/PageNotFound';
 
 const appRoutes = [
   {
@@ -20,8 +21,13 @@ const appRoutes = [
     component: DetailMovie,
     exact: true,
     path: "/detail-movie/:id"
+  },
+  {
+    name: "Page Not Found",
+    component:PageNotFound,
+    exact:true,
+    path:'*'
   }
-
 ]
 
 export default appRoutes;
