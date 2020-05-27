@@ -7,10 +7,13 @@ import {
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import store from '../src/modules/redux/store/store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

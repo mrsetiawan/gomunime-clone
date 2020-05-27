@@ -24,3 +24,5 @@ export * from 'react-redux';
 export * from 'redux-logger';
 export * from 'redux-thunk';
 export * from 'antd';
+
+//melanjutkan setting redux
