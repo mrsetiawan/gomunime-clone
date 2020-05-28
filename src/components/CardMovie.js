@@ -6,7 +6,7 @@ import {
 import imgThumbnail from '../assets/images/thumbnaiil.jpg';
 import CardTitle from './CardTitle';
 
-const CardMovie = ({listMovies}) => {
+const CardMovie = ({ listMovies }) => {
 
   const items = listMovies.map(list => {
     return (
@@ -22,7 +22,7 @@ const CardMovie = ({listMovies}) => {
             </div>
           </div>
           <div className='card-desc-bottom'>
-            <small>{list.names.substring(0,20)}</small>
+            <small>{list.names.substring(0, 20)}</small>
           </div>
         </Link>
       </Card.Grid>

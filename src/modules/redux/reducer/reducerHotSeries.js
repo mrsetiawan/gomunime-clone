@@ -4,21 +4,22 @@ const initialState = {
   error: null
 }
 
-const reducerListMovie = (state = initialState, action) => {
+const reducerHotSeries = (state = initialState, action) => {
   switch (action.type) {
     case 'GET_DATA_HOT_SERIES':
       return {
+        ...state,
         loading: false,
-        dataMovie: [...state.dataMovie, ...action.payload.hot_series]
+        dataMovie: [...action.payload.hot_series]
       };
     case 'INIT_DATA_STARTED':
       return {
         ...state,
-        loading: true
+        loading: !state.loading
       }
     default:
       return state
   }
 }
 
-export default reducerListMovie;
+export default reducerHotSeries;

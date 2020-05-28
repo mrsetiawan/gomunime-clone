@@ -1,8 +1,8 @@
 import { combineReducers } from '../../../libraries/libraries';
-import reducerListMovie from './reducerListMovie';
+import reducerHotSeries from './reducerHotSeries';
 
 const rootReducers = combineReducers({
-  listMovies:reducerListMovie
+  listMovies:reducerHotSeries
 })
 
 export default rootReducers;

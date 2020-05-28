@@ -3,17 +3,23 @@ import {
   Col,
   Row,
   connect,
-  useEffect
+  useEffect,
+  useDispatch
 } from '../libraries/libraries';
 import Layout from './Layout';
 import CardMovie from '../components/CardMovie';
 import CardMoviesSidebar from '../components/CardMoviesSidebar';
-import { fetchMovieList } from '../services/action';
+import { 
+  fetchHotSeries ,
+  fetchLatesRelease
+} from '../services/action';
 
-const Home = ({ listMovies, dispatch }) => {
+const Home = ({ listMovies }) => {
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMovieList())
+    dispatch(fetchHotSeries(), fetchLatesRelease())
   }, []);
 
   return (

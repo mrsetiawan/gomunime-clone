@@ -54,6 +54,7 @@ body {
 }
 
 .navbar-menu {
+    background: -o-linear-gradient(102deg, rgba(2,0,36,1) 4%, rgba(9,9,121,1) 39%, rgba(0,224,255,1) 100%);
     background: linear-gradient(-12deg, rgba(2,0,36,1) 4%, rgba(9,9,121,1) 39%, rgba(0,224,255,1) 100%);
     width: 100vw;
     padding: var(--spacing-15);
@@ -63,6 +64,8 @@ body {
 }
 
 .navbar-menu-deg {
+    background: -webkit-gradient(linear, left top, right top, color-stop(4%, rgba(2,0,36,1)), color-stop(39%, rgba(9,9,121,1)), to(rgba(0,224,255,1)));
+    background: -o-linear-gradient(left, rgba(2,0,36,1) 4%, rgba(9,9,121,1) 39%, rgba(0,224,255,1) 100%);
     background: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(9,9,121,1) 39%, rgba(0,224,255,1) 100%);
     width: 100vw;
     padding: var(--spacing-15);
@@ -71,15 +74,27 @@ body {
 }
 
 .navbar-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-flow: row;
-    flex-wrap: wrap-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
 }
 
 .navbar-flex a {
     color: white;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
     transition: .5s ease;
     cursor: pointer;
 }
@@ -90,6 +105,8 @@ body {
 }
 
 .ant-card-grid {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -113,7 +130,9 @@ body {
 }
 
 .ant-card-grid-hoverable:hover{
-    transform: scale(1.1) !important;
+    -webkit-transform: scale(1.1) !important;
+        -ms-transform: scale(1.1) !important;
+            transform: scale(1.1) !important;
     background-color: white;
 }
 
@@ -121,12 +140,17 @@ body {
     width: 100%;
     height: 200px;
     background-repeat: no-repeat;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .card-grid-custome .card-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    justify-content: space-between;
+    -webkit-box-pack: justify; 
+        -ms-flex-pack: justify; 
+            justify-content: space-between;
     margin-bottom: 10px; 
     background: white;
     z-index: 1;
@@ -135,7 +159,9 @@ body {
 .card-description .card-desc-left {
     background: #4458c7de; 
     padding: 5;
-    flex-grow: 1; 
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; 
     color: white;
 }
 
@@ -187,7 +213,8 @@ body {
     width: 100%;
     height: 80px;
     background-repeat: no-repeat;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .list-desc {
@@ -232,6 +259,8 @@ body {
 
 .footer-bg {
     background: rgb(103,94,130);   
+    background: -webkit-gradient(linear, left top, right top, from(rgba(103,94,130,0.9023984593837535)), color-stop(0%, rgba(14,20,62,0.9500175070028011)), to(rgba(4,11,29,0.938813025210084)));   
+    background: -o-linear-gradient(left, rgba(103,94,130,0.9023984593837535) 0%, rgba(14,20,62,0.9500175070028011) 0%, rgba(4,11,29,0.938813025210084) 100%);   
     background: linear-gradient(90deg, rgba(103,94,130,0.9023984593837535) 0%, rgba(14,20,62,0.9500175070028011) 0%, rgba(4,11,29,0.938813025210084) 100%);
     width: 100%;
     height: auto;
