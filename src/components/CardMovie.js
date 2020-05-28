@@ -6,23 +6,23 @@ import {
 import imgThumbnail from '../assets/images/thumbnaiil.jpg';
 import CardTitle from './CardTitle';
 
-const CardMovie = (props) => {
+const CardMovie = ({listMovies}) => {
 
-  const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
+  const items = listMovies.map(list => {
     return (
-      <Card.Grid className="card-grid-custome" key={item}>
-        <Link to={`/detail-movie/${item}`} >
-          <img src={imgThumbnail} alt="img-thumbnail" />
+      <Card.Grid className="card-grid-custome" key={list.images}>
+        <Link to={`/detail-movie/${list.link}`} >
+          <img src={list.images} alt="img-thumbnail" />
           <div className='card-description'>
             <div className='card-desc-left'>
-              <small>On going</small>
+              <small>{list.status}</small>
             </div>
             <div className='card-desc-right'>
-              <small>Live Action</small>
+              <small>{list.type_anime}</small>
             </div>
           </div>
           <div className='card-desc-bottom'>
-            <small>Lorem ipsum dolor sit amet consectetur?</small>
+            <small>{list.names.substring(0,20)}</small>
           </div>
         </Link>
       </Card.Grid>

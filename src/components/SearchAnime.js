@@ -1,14 +1,13 @@
 import {
   React,
-  Col,
   Row,
   Card,
   Form,
   Input,
-  Button,
   Radio
 } from '../libraries/libraries.js';
 import CardTitle from './CardTitle';
+import ButtonAction from './ButtonAction';
 
 const SearchAnime = () => {
   return (
@@ -37,9 +36,9 @@ const SearchAnime = () => {
                 <Radio value="music">Music</Radio>  
               </Radio.Group>
             </Form.Item>
-            <Button type="primary" shape="round" size='medium' style={{float:'right'}}>
+            <ButtonAction type="primary" shape="round" size='medium' float='pull-right'>
               Search
-            </Button>
+            </ButtonAction>
           </Form>
         </Card.Grid>
       </CardTitle>

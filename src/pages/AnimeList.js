@@ -12,7 +12,7 @@ const AnimeList = () => {
     <Layout>
       <div className="container">
         <Row>
-          <Col lg={18} sm={12} xs={24} className='px-15' >
+          <Col lg={18} sm={12} xs={24} className='pr-15' >
             <SearchAnime />
           </Col>
           <Col lg={6} sm={24} xs={24}>

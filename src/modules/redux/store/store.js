@@ -5,10 +5,10 @@ import {
   reduxLogger,
   reduxThunk
 } from '../../../libraries/libraries';
-// import rootReducers from '../reducer/index';
+import rootReducers from '../reducer/index';
 
 const store = createStore(
-  // rootReducers,
+  rootReducers,
   compose(
     applyMiddleware(
       reduxLogger,reduxThunk

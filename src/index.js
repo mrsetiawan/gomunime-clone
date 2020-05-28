@@ -1,8 +1,9 @@
 import {
   React,
   ReactDOM,
-  Provider
-  
+  Provider,
+  BrowserRouter as Router 
+
 } from './libraries/libraries.js';
 
 import App from './App';
@@ -10,11 +11,11 @@ import * as serviceWorker from './serviceWorker';
 import store from '../src/modules/redux/store/store';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>,
+  </Router>,
   document.getElementById('root')
 );
 

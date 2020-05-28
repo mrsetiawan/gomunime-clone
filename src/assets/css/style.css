@@ -32,10 +32,10 @@ body {
     }
 }
 
-.px-15 {
-    padding-left: 15px;
+.pr-15 {
     padding-right:  15px;
 }
+
 
 /* .wrap-navbar-sticky {
     position: -webkit-sticky;
@@ -224,6 +224,10 @@ body {
 
 .ant-form-item {
     font-weight: bold;
+}
+
+.pull-right {
+    float:right !important;
 }
 
 .footer-bg {

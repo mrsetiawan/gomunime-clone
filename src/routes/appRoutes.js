@@ -20,7 +20,7 @@ const appRoutes = [
     name: "Detail Movie",
     component: DetailMovie,
     exact: true,
-    path: "/detail-movie/:id"
+    path: "/detail-movie/:link"
   },
   {
     name: "Page Not Found",
