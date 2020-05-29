@@ -1,11 +1,15 @@
 import { 
   React,
   Col,
-  Row
+  Row,
+  LazyLoadImage,
+  trackWindowScroll
 } from '../libraries/libraries';
 import imgThumbnail from '../assets/images/thumbnaiil.jpg';
 
 const ListCardSidebar = (props) => {
+
+  const { scrollPosition } = props;
   return (
     <div className='list-right-sidebar'>
       <Col span={24}>
@@ -14,7 +18,12 @@ const ListCardSidebar = (props) => {
             <p>1</p>
           </Col>
           <Col xs={5} className='list-image'>
-            <img src={imgThumbnail} alt="img-left" />
+            <LazyLoadImage
+              alt='image-sidebar-right'
+              scrollPosition={scrollPosition}
+              src={imgThumbnail}
+              visibleByDefault={imgThumbnail}
+            />
           </Col>
           <Col xs={15} className='list-desc'>
             <p>Lorem, ipsum.</p>
@@ -27,4 +36,4 @@ const ListCardSidebar = (props) => {
   )
 }
 
-export default ListCardSidebar;
+export default trackWindowScroll(ListCardSidebar);

@@ -1,7 +1,10 @@
 import {
   React,
   Card,
-  Link
+  Link,
+  LazyLoadImage,
+  trackWindowScroll
+
 } from '../libraries/libraries.js';
 import imgThumbnail from '../assets/images/thumbnaiil.jpg';
 import CardTitle from './CardTitle';
@@ -10,14 +13,20 @@ const CardMovie = (props) => {
 
   const {
     listMovies,
-    title
+    title,
+    scrollPosition
   } = props
 
   const items = listMovies.map(list => {
     return (
       <Card.Grid className="card-grid-custome" key={list.images}>
         <Link to={`/detail-movie/${list.link}`} >
-          <img src={list.images} alt="img-thumbnail" />
+          <LazyLoadImage
+            alt={list.name}
+            scrollPosition={scrollPosition}
+            src={list.images}
+            visibleByDefault={list.images.src === imgThumbnail}
+          />
           <div className='card-description'>
             <div className='card-desc-left'>
               <small>{list.status}</small>
@@ -34,7 +43,6 @@ const CardMovie = (props) => {
     )
   })
 
-  
   return (
     <>
       <CardTitle title={title}>
@@ -45,4 +53,4 @@ const CardMovie = (props) => {
 
 }
 
-export default CardMovie;
+export default trackWindowScroll(CardMovie);

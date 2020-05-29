@@ -24,19 +24,22 @@ const Home = (props) => {
     dispatch(fetchLatesRelease());
   }, [dispatch]);
 
+  const hotSeries = listHotSeries.loading ? <div>loading...</div> :<CardMovie
+    listMovies={listHotSeries.dataHotSeries}
+    title='Hot series'
+  />
+
+  const latesRelease = <CardMovie
+    listMovies={listLatestRelease}
+    title='Latest Release'
+  />
   return (
     <Layout>
       <div className="container">
         <Row>
           <Col lg={18} sm={12} xs={24} className='pr-15'>
-            <CardMovie
-              listMovies={listHotSeries}
-              title='Hot series'
-            />
-            <CardMovie
-              listMovies={listLatestRelease}
-              title='Latest Release'
-            />
+            {hotSeries}
+            {latesRelease}
           </Col>
           <Col lg={6} sm={24} xs={24}>
             <CardMoviesSidebar />
@@ -48,7 +51,7 @@ const Home = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-  listHotSeries: state.listHotSeries.dataHotSeries,
+  listHotSeries: state.listHotSeries,
   listLatestRelease: state.listLatesRelease.dataLatestRelease
 })
 
