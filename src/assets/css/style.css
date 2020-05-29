@@ -1,9 +1,5 @@
 @import './config.css';
 
-body {
-    width: 100vw;
-    overflow-x: hidden;
-}
 .container {
     padding-right: var(--spacing-15);
     padding-left: var(--spacing-15);
@@ -23,12 +19,12 @@ body {
 }
 @media (min-width: 992px) {
     .container {
-        width: 970px;
+        width: 1300px;
     }
 }
 @media (min-width: 1200px) {
     .container {
-        width: 1170px;
+        width: 1600px;
     }
 }
 
@@ -36,41 +32,20 @@ body {
     padding-right:  15px;
 }
 
-
-/* .wrap-navbar-sticky {
-    position: -webkit-sticky;
+.main-navbar {
+    background: #000000c7;
+    width: 100%;
+    line-height: 1.5;
+    color:white;
     position: sticky;
     top: 0;
-} */
-
-.main-navbar {
-    background: #fff;
-    padding: var(--spacing-15);
+    z-index: 1;
+    margin-bottom: var(--spacing-15);
 }
 
 .ant-card-bordered {
     border: none !important;
     margin-bottom: 15px !important;
-}
-
-.navbar-menu {
-    background: -o-linear-gradient(102deg, rgba(2,0,36,1) 4%, rgba(9,9,121,1) 39%, rgba(0,224,255,1) 100%);
-    background: linear-gradient(-12deg, rgba(2,0,36,1) 4%, rgba(9,9,121,1) 39%, rgba(0,224,255,1) 100%);
-    width: 100vw;
-    padding: var(--spacing-15);
-    line-height: 1.5;
-    color:white;
-    margin-bottom: var(--spacing-15);
-}
-
-.navbar-menu-deg {
-    background: -webkit-gradient(linear, left top, right top, color-stop(4%, rgba(2,0,36,1)), color-stop(39%, rgba(9,9,121,1)), to(rgba(0,224,255,1)));
-    background: -o-linear-gradient(left, rgba(2,0,36,1) 4%, rgba(9,9,121,1) 39%, rgba(0,224,255,1) 100%);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(9,9,121,1) 39%, rgba(0,224,255,1) 100%);
-    width: 100vw;
-    padding: var(--spacing-15);
-    line-height: 1.5;
-    color:white;
 }
 
 .navbar-flex {
@@ -93,9 +68,11 @@ body {
 
 .navbar-flex a {
     color: white;
-    -webkit-transition: .5s ease;
-    -o-transition: .5s ease;
-    transition: .5s ease;
+    cursor: pointer;
+}
+
+.navbar-flex a h1{
+    color: white;
     cursor: pointer;
 }
 
@@ -104,41 +81,61 @@ body {
     font-weight: bold;
 }
 
-.ant-card-grid {
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
-}
-
-.card-grid-custome{
-    /* width: 24.299% !important; */
-    width: 18.5% !important;
-    cursor: pointer !important;
-    padding: 0 !important;
-    margin: 6px !important;
-    border: none !important;
-    text-align: center !important;
-    margin-bottom: 15px !important;
-}
-
-.inside-hover {
-    display: none;
+.ant-card {
+    background: transparent !important;
+    opacity: 0.8;
 }
 
 .ant-card-head {
-    padding: 0 9px !important;
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 24px !important;
+    border-bottom: 0 !important;
 }
 
-.ant-card-grid-hoverable:hover{
-    -webkit-transform: scale(1.1) !important;
-        -ms-transform: scale(1.1) !important;
-            transform: scale(1.1) !important;
-    background-color: white;
+.card-grid-custome{
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    margin: 6px;
+    text-align: center;
+    transition: .5s ease;
+    font-size: 16px;
+    position: relative;
+}
+
+/* .card-grid-custom-hoverable {
+    position: absolute;
+    top: 0%;
+    color: white;
+    left: 0%;
+    width: 100%;
+    background: red;
+    height: 259px;
+    display: none;
+    box-sizing: border-box;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+} */
+
+
+.title-movie h2{
+    color: white;
+    padding: 15px 3px;
+}
+
+.card-grid-custome:hover {
+    z-index: 1;
+    backdrop-filter: blur(100px);
+    -webkit-transform: scale(1.2) !important;
+        -ms-transform: scale(1.2) !important;
+            transform: scale(1.2) !important;
 }
 
 .card-grid-custome img{
     width: 100%;
-    height: 200px;
+    height: 320px;
     background-repeat: no-repeat;
     -o-object-fit: cover;
        object-fit: cover;
@@ -151,14 +148,13 @@ body {
     -webkit-box-pack: justify; 
         -ms-flex-pack: justify; 
             justify-content: space-between;
-    margin-bottom: 10px; 
     background: white;
     z-index: 1;
 }
 
 .card-description .card-desc-left {
     background: #4458c7de; 
-    padding: 5;
+    padding: 15px;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1; 
@@ -168,6 +164,7 @@ body {
 .card-description .card-desc-right {
     background: #ffc625; 
     color: black; 
+    padding: 15px;
 }
 
 .card-description .card-desc-right small {

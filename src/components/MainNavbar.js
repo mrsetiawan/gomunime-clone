@@ -1,4 +1,4 @@
-import { 
+import {
   React,
   Row,
   Col,
@@ -10,35 +10,31 @@ import SearchMovies from './SearchMovies';
 
 const MainNavbar = () => {
   return (
-    <div className='wrap-navbar-sticky'>
-      <div className='main-navbar'>
-        <div className='container'>
-          <Row justify="space-between">
-            <Col lg={18} md={12} sm={12} xs={24}>
+    <div className='main-navbar'>
+      <div className='container'>
+        <Row>
+          <Col lg={14}>
+            <NavMenuChildren>
               <Link to="/">
-                <img src={images} alt="tes" />
+                <h1>Logo</h1>
               </Link>
-            </Col>
-            <Col lg={6} md={12} sm={12} xs={24}>
-              <SearchMovies />
-            </Col>
-          </Row>
-        </div>
+              <Link to="/"><span>Home</span></Link>
+              <Link to="/anime-list">Anime List</Link>
+              <span>Movie List</span>
+              <span>Live Action</span>
+              <span>Live Action</span>
+              <span>Completed</span>
+              <span>OnGoing</span>
+              <span>Anime Episode Terbaru</span>
+            </NavMenuChildren>
+          </Col>
+          <Col lg={10}>
+            {/* <SearchMovies /> */}
+          </Col>
+        </Row>
       </div>
-
-      <Row justify="start">
-        <NavMenuChildren>
-          <Link to="/">Home</Link>
-          <Link to="/anime-list">Anime List</Link>
-          <span>Movie List</span>
-          <span>Tv Series</span>
-          <span>Live Action</span>
-          <span>Completed</span>
-          <span>OnGoing</span>
-          <span>Anime Episode Terbaru</span>  
-        </NavMenuChildren>
-      </Row>
     </div>
+
   )
 }
 

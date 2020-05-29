@@ -12,7 +12,6 @@ import {
 } from '../services/action';
 import Layout from './Layout';
 import CardMovie from '../components/CardMovie';
-import CardMoviesSidebar from '../components/CardMoviesSidebar';
 
 const Home = (props) => {
 
@@ -24,7 +23,7 @@ const Home = (props) => {
     dispatch(fetchLatesRelease());
   }, [dispatch]);
 
-  const hotSeries = listHotSeries.loading ? <div>loading...</div> :<CardMovie
+  const hotSeries = listHotSeries.loading ? <div>loading...</div> : <CardMovie
     listMovies={listHotSeries.dataHotSeries}
     title='Hot series'
   />
@@ -36,15 +35,10 @@ const Home = (props) => {
   return (
     <Layout>
       <div className="container">
-        <Row>
-          <Col lg={18} sm={12} xs={24} className='pr-15'>
-            {hotSeries}
-            {latesRelease}
-          </Col>
-          <Col lg={6} sm={24} xs={24}>
-            <CardMoviesSidebar />
-          </Col>
-        </Row>
+        <Col lg={24} sm={12} xs={24}>
+          {hotSeries}
+          {latesRelease}
+        </Col>
       </div>
     </Layout>
   )

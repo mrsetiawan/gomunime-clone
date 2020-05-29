@@ -1,13 +1,14 @@
 import {
   React,
-  Card
+  Col
 } from '../libraries/libraries';
 
 const CardTitle = (props) => {
   return (
-    <Card title={props.title} style={{width: '100%'}}>
+    <Col xs={24} className='title-movie'>
+      <h2>{props.title}</h2>
       {props.children}
-    </Card>
+    </Col>
   )
 }
 

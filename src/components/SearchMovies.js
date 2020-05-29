@@ -12,7 +12,7 @@ const SearchMovies = () => {
       <Search
         placeholder="input search text"
         onSearch={value => console.log(value)}
-        style={{ width: 300 }}
+        style={{ width: 300,float:'right' }}
       />
     </div>
   )
