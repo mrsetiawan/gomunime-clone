@@ -16,12 +16,12 @@ import CardMoviesSidebar from '../components/CardMoviesSidebar';
 
 const Home = (props) => {
 
-  const { listMovies, listLatestRelease } = props
+  const { listHotSeries, listLatestRelease } = props
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchHotSeries());
-    dispatch(fetchLatesRelease())
+    dispatch(fetchLatesRelease());
   }, [dispatch]);
 
   return (
@@ -30,10 +30,10 @@ const Home = (props) => {
         <Row>
           <Col lg={18} sm={12} xs={24} className='pr-15'>
             <CardMovie
-              listMovies={listMovies}
+              listMovies={listHotSeries}
               title='Hot series'
             />
-            <CardMovie 
+            <CardMovie
               listMovies={listLatestRelease}
               title='Latest Release'
             />
@@ -48,7 +48,7 @@ const Home = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-  listMovies: state.listMovies.dataMovie,
+  listHotSeries: state.listHotSeries.dataHotSeries,
   listLatestRelease: state.listLatesRelease.dataLatestRelease
 })
 

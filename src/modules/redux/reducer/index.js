@@ -3,7 +3,7 @@ import reducerHotSeries from './reducerHotSeries';
 import reducerLatesRelease from './reducerLatestRelease';
 
 const rootReducers = combineReducers({
-  listMovies:reducerHotSeries,
+  listHotSeries:reducerHotSeries,
   listLatesRelease: reducerLatesRelease
 });
 

@@ -1,5 +1,5 @@
 const initialState = {
-  dataMovie: [],
+  dataHotSeries: [],
   loading: false,
   error: null
 }
@@ -10,7 +10,7 @@ const reducerHotSeries = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        dataMovie: [...action.payload.hot_series]
+        dataHotSeries: [...action.payload.hot_series]
       };
     case 'INIT_DATA_STARTED':
       return {
