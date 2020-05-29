@@ -6,28 +6,37 @@ import {
   useEffect,
   useDispatch
 } from '../libraries/libraries';
+import {
+  fetchHotSeries,
+  fetchLatesRelease
+} from '../services/action';
 import Layout from './Layout';
 import CardMovie from '../components/CardMovie';
 import CardMoviesSidebar from '../components/CardMoviesSidebar';
-import { 
-  fetchHotSeries ,
-  fetchLatesRelease
-} from '../services/action';
 
-const Home = ({ listMovies }) => {
+const Home = (props) => {
 
+  const { listMovies, listLatestRelease } = props
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchHotSeries(), fetchLatesRelease())
-  }, []);
+    dispatch(fetchHotSeries());
+    dispatch(fetchLatesRelease())
+  }, [dispatch]);
 
   return (
     <Layout>
       <div className="container">
         <Row>
           <Col lg={18} sm={12} xs={24} className='pr-15'>
-            <CardMovie listMovies={listMovies} />
+            <CardMovie
+              listMovies={listMovies}
+              title='Hot series'
+            />
+            <CardMovie 
+              listMovies={listLatestRelease}
+              title='Latest Release'
+            />
           </Col>
           <Col lg={6} sm={24} xs={24}>
             <CardMoviesSidebar />
@@ -39,7 +48,8 @@ const Home = ({ listMovies }) => {
 }
 
 const mapStateToProps = (state) => ({
-  listMovies: state.listMovies.dataMovie
+  listMovies: state.listMovies.dataMovie,
+  listLatestRelease: state.listLatesRelease.dataLatestRelease
 })
 
 export default connect(mapStateToProps, null)(Home);

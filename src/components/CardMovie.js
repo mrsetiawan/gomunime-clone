@@ -6,7 +6,12 @@ import {
 import imgThumbnail from '../assets/images/thumbnaiil.jpg';
 import CardTitle from './CardTitle';
 
-const CardMovie = ({ listMovies }) => {
+const CardMovie = (props) => {
+
+  const {
+    listMovies,
+    title
+  } = props
 
   const items = listMovies.map(list => {
     return (
@@ -29,9 +34,10 @@ const CardMovie = ({ listMovies }) => {
     )
   })
 
+  
   return (
     <>
-      <CardTitle title='Hot Series Update'>
+      <CardTitle title={title}>
         {items}
       </CardTitle>
     </>
