@@ -1,4 +1,4 @@
-import Home from '../pages/Home';
+import HomeContainer from '../containers/HomeContainers';
 import AnimeList from '../pages/AnimeList';
 import DetailMovie from '../pages/DetailMovie';
 import PageNotFound from '../pages/PageNotFound';
@@ -6,7 +6,7 @@ import PageNotFound from '../pages/PageNotFound';
 const appRoutes = [
   {
     name: "Home",
-    component: Home,
+    component: HomeContainer,
     exact: true,
     path: "/"
   },

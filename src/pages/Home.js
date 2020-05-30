@@ -1,8 +1,6 @@
 import {
   React,
   Col,
-  Row,
-  connect,
   useEffect,
   useDispatch
 } from '../libraries/libraries';
@@ -19,8 +17,10 @@ const Home = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchHotSeries());
-    dispatch(fetchLatesRelease());
+    if (listHotSeries.dataHotSeries.length < 1 && listLatestRelease.dataLatestRelease.length < 1) {
+      dispatch(fetchHotSeries());
+      dispatch(fetchLatesRelease());
+    }
   }, [dispatch]);
 
   const hotSeries = listHotSeries.loading ? <div>loading...</div> : <CardMovie
@@ -28,10 +28,11 @@ const Home = (props) => {
     title='Hot series'
   />
 
-  const latesRelease = <CardMovie
-    listMovies={listLatestRelease}
+  const latesRelease = listLatestRelease.loading ? <div>loading...</div> : <CardMovie
+    listMovies={listLatestRelease.dataLatestRelease}
     title='Latest Release'
   />
+
   return (
     <Layout>
       <div className="container">
@@ -44,9 +45,4 @@ const Home = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({
-  listHotSeries: state.listHotSeries,
-  listLatestRelease: state.listLatesRelease.dataLatestRelease
-})
-
-export default connect(mapStateToProps, null)(Home);
+export default Home;
