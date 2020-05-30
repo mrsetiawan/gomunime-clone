@@ -1,10 +1,11 @@
 import {
   React,
   Link,
+  Col,
+  Row,
   LazyLoadImage,
   trackWindowScroll,
-  Col,
-  Row
+  PlayCircleOutlined
 
 } from '../libraries/libraries.js';
 import imgThumbnail from '../assets/images/thumbnaiil.jpg';
@@ -20,7 +21,7 @@ const CardMovie = (props) => {
 
   const items = listMovies.map(list => {
     return (
-      <Col span={4} key={list.images}>
+      <Col lg={4} md={4} sm={6} xs={24} key={list.images}>
         <div className="card-grid-custome">
           <Link to={`/detail-movie/${list.link}`} >
             <LazyLoadImage
@@ -29,19 +30,20 @@ const CardMovie = (props) => {
               src={list.images}
               visibleByDefault={list.images.src === imgThumbnail}
             />
-            <div className='card-description'>
-              <div className='card-desc-left'>
-                <small>{list.status}</small>
-              </div>
-              <div className='card-desc-right'>
-                <small>{list.type_anime}</small>
+            <div className='card-wrapper'>
+              <div className='card-main'>
+                <div>
+                  <h1>
+                    <PlayCircleOutlined style={{color:'white',fontSize:'60px'}}/>
+                  </h1>
+                  <p>{list.names}</p>
+                </div>
+                <div>
+                  <small>{list.status}</small>
+                  <small>{list.type_anime}</small>
+                </div>
               </div>
             </div>
-            {/* <div className='card-desc-bottom'>
-            <small>{list.names.substring(0, 20)}</small>
-          </div> */}
-            {/* <div className='card-grid-custom-hoverable'>
-          </div> */}
           </Link>
         </div>
       </Col>
@@ -51,7 +53,7 @@ const CardMovie = (props) => {
   return (
     <>
       <CardTitle title={title}>
-        <Row style={{marginBottom: '35px'}}>
+        <Row style={{ marginBottom: '35px' }}>
           {items}
         </Row>
       </CardTitle>

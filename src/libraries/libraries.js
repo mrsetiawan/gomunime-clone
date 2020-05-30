@@ -27,6 +27,7 @@ export * from 'react-redux';
 export * from 'redux-logger';
 export * from 'redux-thunk';
 export * from 'antd';
+export * from '@ant-design/icons';
 export * from 'react-lazy-load-image-component';
 export * from 'axios';
 
