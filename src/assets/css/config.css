@@ -2,6 +2,7 @@
     /* color */
     --white: white;
     --black: black;
+    --red: red;
     --gainsboro: #DCDCDC;
     --dogerblue: #1E90FF;
     /* display */
@@ -20,4 +21,27 @@
     /* border */
     --b1-black: 1px solid var(--black);
     --b1-gainsboro: 1px solid var(--gainsboro);
-  }
+    /* transition */
+    --transition : all .5s ease-in-out 0s;
+}
+
+@media (max-width: 425px){
+    .ant-card-grid {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 1300px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1600px;
+    }
+}

@@ -7,9 +7,11 @@ import {
 import images from '../../src/assets/images/gomu.png';
 import NavMenuChildren from './NavMenuChildren';
 import SearchMovies from './SearchMovies';
+// import LineGradient from './LineGradient';
 
 const MainNavbar = () => {
   return (
+    <>
     <div className='main-navbar'>
       <div className='container'>
         <Row>
@@ -33,8 +35,9 @@ const MainNavbar = () => {
           </Col>
         </Row>
       </div>
+      {/* <LineGradient classTop='footer-line-top' /> */}
     </div>
-
+  </>
   )
 }
 

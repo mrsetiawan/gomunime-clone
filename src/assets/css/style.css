@@ -6,55 +6,16 @@
     margin-right: var(--auto);
     margin-left: var(--auto);
 }
-/* 
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
-} */
-
-@media (max-width: 425px){
-    .ant-card-grid {
-        width: 100%;
-    }
-}
-@media (min-width: 768px) {
-    .container {
-        width: 750px;
-    }
-}
-@media (min-width: 992px) {
-    .container {
-        width: 1300px;
-    }
-}
-@media (min-width: 1200px) {
-    .container {
-        width: 1600px;
-    }
-}
-
-.pr-15 {
-    padding-right:  15px;
-}
 
 .main-navbar {
     background: #000000c7;
     width: 100%;
     line-height: 1.5;
-    color:white;
+    color: var(--white);
     position: sticky;
     top: 0;
     z-index: 1;
-    /* position: relative; */
     margin-bottom: var(--spacing-15);
-}
-
-.ant-card-bordered {
-    border: none !important;
-    margin-bottom: 15px !important;
 }
 
 .navbar-flex {
@@ -87,12 +48,12 @@
 }
 
 .navbar-flex a:hover {
-    color: red;
+    color: var(--red);
     font-weight: bold;
 }
 
 .title-movie h2{
-    color: white;
+    color: var(--white);
     padding: 15px 3px;
 }
 
@@ -103,10 +64,10 @@
     text-align: center;
     font-size: 16px;
     position: relative;
-    transition: all .5s ease-in-out 0s;
-    -moz-transition: all .5s ease-in-out 0s;
-    -webkit-transition: all .5s ease-in-out 0s;
-    -o-transition: all .5s ease-in-out 0s;
+    transition: var(--transition);
+    -moz-transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 
 .card-grid-custome img{
@@ -116,10 +77,10 @@
     background-repeat: no-repeat;
     -o-object-fit: cover;
     object-fit: cover;
-    transition: all .5s ease-in-out 0s;
-    -moz-transition: all .5s ease-in-out 0s;
-    -webkit-transition: all .5s ease-in-out 0s;
-    -o-transition: all .5s ease-in-out 0s;
+    transition: var(--transition);
+    -moz-transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 
 .card-wrapper {
@@ -131,13 +92,13 @@
     left: 0;
     padding: 65px 15px 5px;
     opacity: 0; 
-    color: #fff;
+    color: var(--white);
     font-weight: bold;
     text-transform: capitalize;
-    transition: all .5s ease-in-out 0s;
-    -moz-transition: all .5s ease-in-out 0s;
-    -webkit-transition: all .5s ease-in-out 0s;
-    -o-transition: all .5s ease-in-out 0s;
+    transition: var(--transition);
+    -moz-transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 
 .card-wrapper .card-main {
@@ -155,7 +116,7 @@
 .card-wrapper .card-main small{
     padding-left: 15px;
     padding-right: 15px;
-    color: red;
+    color: var(--red);
 }
 
 .card-grid-custome:hover .card-wrapper{
@@ -242,22 +203,31 @@
     border: 1px solid #dcdcdc;
 }
 
-.ant-form-item {
-    font-weight: bold;
-}
-
-.pull-right {
-    float:right !important;
-}
-
 .footer-bg {
-    background: rgb(103,94,130);   
-    background: -webkit-gradient(linear, left top, right top, from(rgba(103,94,130,0.9023984593837535)), color-stop(0%, rgba(14,20,62,0.9500175070028011)), to(rgba(4,11,29,0.938813025210084)));   
-    background: -o-linear-gradient(left, rgba(103,94,130,0.9023984593837535) 0%, rgba(14,20,62,0.9500175070028011) 0%, rgba(4,11,29,0.938813025210084) 100%);   
-    background: linear-gradient(90deg, rgba(103,94,130,0.9023984593837535) 0%, rgba(14,20,62,0.9500175070028011) 0%, rgba(4,11,29,0.938813025210084) 100%);
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.896796218487395) 100%, rgba(37,23,23,0.9220063025210083) 100%);
     width: 100%;
-    height: auto;
+    height: 7vh;
     background-size: cover;
     background-position: center;
     padding: 15px;
+    position: relative;
+}
+
+.footer-line-top {
+    background: white;
+    box-sizing: border-box;
+    height: 5px;
+    opacity: 1;
+    background: rgb(255,0,0);
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.5) 1%, rgba(64,30,30,0.9220063025210083) 100%);
+}
+
+.footer-line-bottom {
+    background: white;
+    box-sizing: border-box;
+    height: 5px;
+    opacity: 1;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 1%, rgba(64,30,30,0.9220063025210083) 100%);
 }
