@@ -34,24 +34,42 @@ const DetailMovie = (props) => {
               </Col>
               <Col lg={14} className='spacing-50'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta earum obcaecati accusamus quo nesciunt.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta earum obcaecati accusamus quo nesciunt.
               </Col>
               <Col lg={4} className='spacing-50'>
                 <button className='button-rating'>Rating 8.5</button>
               </Col>
             </Row>
           </Col>
-          <Col lg={8} xs={24} className='spacing-50' style={{paddingTop: '0 !important'}}>
-            <Col span={24}>
-              <Row gutter={16}>
-                <Col lg={8} className='detail-episode'>
-                  <p><PlayCircleOutlined /></p>
-                  <img src={image} alt="img-banner" width='100%' style={{objectFit: 'cover',borderRadius: '10px',width: '100%',height: '50%',objectPosition: '50% 2%'}}/>
+          <Col lg={8} xs={24} className='p-0 spacing-50'>
+            <Row type="flex" justify="end">
+              <Col span={20}>
+                <Col span={24} className='detail-episode-wrapper'>
+                  <Row gutter={[16, 16]}>
+                    <Col lg={8} className='detail-episode'>
+                      <p><PlayCircleOutlined /></p>
+                      <img src={image} alt="img-banner" />
+                    </Col>
+                    <Col lg={16}>
+                      <p><b>Episode 1</b></p>
+                      <p>Lorem, ipsum dolor.</p>
+                    </Col>
+                  </Row>
                 </Col>
-                <Col lg={16}>
-                  <small><b>Episode 1</b></small>
+                <Col span={24} className='detail-episode-wrapper'>
+                  <Row gutter={[16, 16]}>
+                    <Col lg={8} className='detail-episode'>
+                      <p><PlayCircleOutlined /></p>
+                      <img src={image} alt="img-banner" />
+                    </Col>
+                    <Col lg={16}>
+                      <p><b>Episode 1</b></p>
+                      <p>Lorem, ipsum dolor.</p>
+                    </Col>
+                  </Row>
                 </Col>
-              </Row>
-            </Col>
+              </Col>
+            </Row>
           </Col>
         </Row>
       </div>

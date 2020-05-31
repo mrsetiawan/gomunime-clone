@@ -276,3 +276,38 @@
     border: none;
     border-radius: 5px;
 }
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.detail-episode-wrapper {
+    max-height: 120px;
+    margin-bottom: 15px;
+}
+
+.detail-episode-wrapper p{
+    margin-bottom: 0 !important;
+}
+
+
+
+.detail-episode img{
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 50%;
+    object-position: 50% 2%;
+    filter: grayscale(30%);
+    overflow: hidden;
+}
+
+.detail-episode p {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    z-index: 1;
+    margin-bottom: 0 !important;
+}
