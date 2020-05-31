@@ -30,4 +30,5 @@ export * from 'antd';
 export * from '@ant-design/icons';
 export * from 'react-lazy-load-image-component';
 export * from 'axios';
+export * from 'prop-types';
 
