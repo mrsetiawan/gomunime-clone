@@ -1,10 +1,10 @@
 import { combineReducers } from '../../../libraries/libraries';
 import reducerHotSeries from './reducerHotSeries';
-import reducerLatesRelease from './reducerLatestRelease';
+import reducerLatestRelease from './reducerLatestRelease';
 
 const rootReducers = combineReducers({
   listHotSeries:reducerHotSeries,
-  listLatesRelease: reducerLatesRelease
+  listLatesRelease: reducerLatestRelease
 });
 
 export default rootReducers;

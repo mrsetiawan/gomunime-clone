@@ -1,37 +1,41 @@
 import {
   React,
   Col,
-  useEffect,
-  useDispatch
+  useEffect
 } from '../libraries/libraries';
-import {
-  fetchHotSeries,
-  fetchLatesRelease
-} from '../services/action';
+
 import Layout from './Layout';
 import CardMovie from '../components/CardMovie';
 
 const Home = (props) => {
 
-  const { listHotSeries, listLatestRelease } = props
-  const dispatch = useDispatch();
+  const {
+    listHotSeries,
+    listLatestRelease,
+    fetchHotSeries,
+    fetchLatesRelease
+  } = props
 
   useEffect(() => {
     if (listHotSeries.dataHotSeries.length < 1 && listLatestRelease.dataLatestRelease.length < 1) {
-      dispatch(fetchHotSeries());
-      dispatch(fetchLatesRelease());
+      fetchHotSeries();
+      fetchLatesRelease();
     }
-  }, [dispatch]);
+  }, []);
 
-  const hotSeries = listHotSeries.loading ? <div>loading...</div> : <CardMovie
-    listMovies={listHotSeries.dataHotSeries}
-    title='Hot series'
-  />
+  const hotSeries = listHotSeries.loading ?
+    <div>loading...</div> :
+    <CardMovie
+      listMovies={listHotSeries.dataHotSeries}
+      title='Hot series'
+    />
 
-  const latesRelease = listLatestRelease.loading ? <div>loading...</div> : <CardMovie
-    listMovies={listLatestRelease.dataLatestRelease}
-    title='Latest Release'
-  />
+  const latesRelease = listLatestRelease.loading ?
+    <div>loading...</div> :
+    <CardMovie
+      listMovies={listLatestRelease.dataLatestRelease}
+      title='Latest Release'
+    />
 
   return (
     <Layout>

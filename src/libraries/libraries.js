@@ -16,7 +16,7 @@ export {
   compose,
   reduxLogger,
   reduxThunk,
-  axios
+  axios,
 };
 
 export * from 'react';

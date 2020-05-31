@@ -23,7 +23,10 @@ const CardMovie = (props) => {
     return (
       <Col lg={4} md={4} sm={6} xs={24} key={list.images}>
         <div className="card-grid-custome">
-          <Link to={`/detail-movie/${list.link}`} >
+          <Link to={{
+            pathname: `/detail-movie/${list.names}`,
+            link: list.link
+          }}>
             <LazyLoadImage
               alt={list.name}
               scrollPosition={scrollPosition}
@@ -34,7 +37,7 @@ const CardMovie = (props) => {
               <div className='card-main'>
                 <div>
                   <h1>
-                    <PlayCircleOutlined style={{color:'white',fontSize:'60px'}}/>
+                    <PlayCircleOutlined style={{ color: 'white', fontSize: '60px' }} />
                   </h1>
                   <p>{list.names}</p>
                 </div>

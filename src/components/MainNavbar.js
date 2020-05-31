@@ -24,7 +24,7 @@ const MainNavbar = () => {
               <Link to="/anime-list">Anime List</Link>
               <span>Movie List</span>
               <span>Live Action</span>
-              <span>Live Action</span>
+              <span>Tv Series</span>
               <span>Completed</span>
               <span>OnGoing</span>
               <span>Anime Episode Terbaru</span>

@@ -3,7 +3,7 @@ import { axios } from '../libraries/libraries';
 export const fetchHotSeries = () => {
   return dispatch => {
     dispatch(initDataStarted());
-    axios.get('http://localhost:4000/data')
+    axios.get('http://localhost:3333/data')
       .then((res) => {
         dispatch(responseHotSeries(res.data))
       })
@@ -14,7 +14,7 @@ export const fetchHotSeries = () => {
 export const fetchLatesRelease = () => {
   return dispatch => {
     dispatch(initDataStarted());
-    axios.get('http://localhost:8000/data')
+    axios.get('http://localhost:4000/data')
       .then((res) => {
         dispatch(responseLatestRelease(res.data))
       })

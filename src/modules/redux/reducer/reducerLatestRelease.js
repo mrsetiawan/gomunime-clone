@@ -10,12 +10,12 @@ const reducerLatesRelease = (state = intialState, action) => {
       return {
         ...state,
         loading: false,
-        dataLatestRelease:[...action.payload.latest_release]
+        dataLatestRelease: [...action.payload.latest_release]
       };
     case 'INIT_DATA_STARTED':
       return {
         ...state,
-        loading: true
+        loading: !state.loading
       };
     default:
       return state;

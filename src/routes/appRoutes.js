@@ -1,4 +1,5 @@
 import HomeContainer from '../containers/HomeContainers';
+// import Home from '../pages/Home';
 import AnimeList from '../pages/AnimeList';
 import DetailMovie from '../pages/DetailMovie';
 import PageNotFound from '../pages/PageNotFound';
@@ -20,7 +21,7 @@ const appRoutes = [
     name: "Detail Movie",
     component: DetailMovie,
     exact: true,
-    path: "/detail-movie/:link"
+    path: "/detail-movie/:slug"
   },
   {
     name: "Page Not Found",

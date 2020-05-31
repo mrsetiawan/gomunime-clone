@@ -1,6 +1,10 @@
 import {
-  connect,
+  connect
 } from '../libraries/libraries';
+import {
+  fetchHotSeries,
+  fetchLatesRelease
+} from '../services/action';
 import Home from '../pages/Home';
 
 const mapStateToProps = (state) => ({
@@ -8,4 +12,9 @@ const mapStateToProps = (state) => ({
   listLatestRelease: state.listLatesRelease
 })
 
-export default connect(mapStateToProps, null)(Home);
+const mapDispatchToProps = {
+  fetchHotSeries,
+  fetchLatesRelease
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
