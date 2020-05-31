@@ -5,8 +5,8 @@ import {
   Row,
   LazyLoadImage,
   trackWindowScroll,
-  PlayCircleOutlined
-
+  PlayCircleOutlined,
+  PropTypes
 } from '../libraries/libraries.js';
 import imgThumbnail from '../assets/images/thumbnaiil.jpg';
 import CardTitle from './CardTitle';
@@ -63,7 +63,6 @@ const CardMovie = (props) => {
       </CardTitle>
     </>
   )
-
 }
 
 export default trackWindowScroll(CardMovie);

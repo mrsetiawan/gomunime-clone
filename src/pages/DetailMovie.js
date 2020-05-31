@@ -2,13 +2,13 @@ import {
   React,
   Col,
   Row,
-  Button,
   useEffect,
   PlayCircleOutlined,
   PropTypes,
 } from '../libraries/libraries';
 import Layout from './Layout';
 import BannerImage from '../assets/images/footer.jpg';
+import CardMovie from '../components/CardMovie';
 
 const DetailMovie = (props) => {
 
@@ -70,6 +70,9 @@ const DetailMovie = (props) => {
                 </Col>
               </Col>
             </Row>
+          </Col>
+          <Col span={24}>
+            {/* <CardMovie /> */}
           </Col>
         </Row>
       </div>
