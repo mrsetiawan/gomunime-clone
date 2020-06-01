@@ -26,7 +26,8 @@ const CardMovie = (props) => {
           <Link to={{
             pathname: `/detail-movie/${list.names}`,
             link: list.link,
-            image: list.images
+            image: list.images,
+            names: list.names
           }}>
             <LazyLoadImage
               alt={list.name}

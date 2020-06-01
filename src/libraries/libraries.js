@@ -6,6 +6,7 @@ import { createStore, compose } from 'redux';
 import reduxLogger from 'redux-logger';
 import reduxThunk from 'redux-thunk';
 import axios from 'axios';
+// import {Slider as SlideRecommend} from 'react-slick';
 
 export {
   React, 
@@ -17,6 +18,7 @@ export {
   reduxLogger,
   reduxThunk,
   axios,
+  // SlideRecommend
 };
 
 export * from 'react';
@@ -28,6 +30,7 @@ export * from 'redux-logger';
 export * from 'redux-thunk';
 export * from 'antd';
 export * from '@ant-design/icons';
+// export * from 'react-slick';
 export * from 'react-lazy-load-image-component';
 export * from 'axios';
 export * from 'prop-types';
